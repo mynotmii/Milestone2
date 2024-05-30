@@ -1,0 +1,71 @@
+
+body {
+    display: block;
+    margin: -8px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: url(/my-personal-project/img/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100% cover;    
+}
+
+.navbar-left,
+.navbar-right{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left img{
+    width: 100px;
+}
+
+.navbar-left-items{
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+
+.navbar-left div:hover{
+    text-decoration: none;
+    color: beige;
+}
+
+
+.navbar-left-items > *,
+.navbar-right-login > *{
+    padding: 20px;
+}
+
+.navbar-right-login{
+    display: flex;
+    border: 1px solid beige;
+    padding: 3px 5px;
+    align-items: right;
+    font-size: 12px;
+    
+}
+
+.navbar-right-login a{
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: inherit;
+    font-size: 13px;
+}
+
+.navbar-right-login a:hover{
+    color: beige;
+}
