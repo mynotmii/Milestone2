@@ -11,6 +11,15 @@
     font-family: 'Spartan', sans-serif;
 }
 
+body {
+    display: block;
+    margin: -8px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -54,13 +63,48 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 20px 20px; 
-    background-color: white;
+    background-color: #FC9F5B;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.66);
     position: sticky;
     z-index: 999;
     top: 0;
     left: 0;
 } 
+
+.navbar-left-items ul{
+    list-style: none;
+}
+
+.navbar-left-items ul li{
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-left-items ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: #111;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+}
+
+.navbar-left-items ul li ul.dropdown li{
+    display: block;
+}
+
+.navbar-left-items ul li ul.dropdown {
+    width: 100%;
+    background: #fc9e5b;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.navbar-left-items ul li:hover ul.dropdown {
+    display: block;
+}
+
 
 .navbar-left,
 .navbar-right{
@@ -83,7 +127,7 @@ nav{
 }
 
 
-.navbar-left div:hover{
+.navbar-left a:hover{
     text-decoration: none;
     color: beige;
 }
@@ -110,34 +154,8 @@ nav{
     font-size: 13px;
 }
 
-.navbar-right-login a:hover{
-    color: beige;
-}
-
-#navbar-items{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#navbar-items li{
-    list-style: none;
-    padding: 0 20px;
-}
-
-#navbar-items li a{
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-}
-
-#navbar-items li a:hover{
-    color: #088178
-}
-
-#mobile, #close{
-    display: none;
-    align-items: center;
+.log:hover, .sign:hover{
+    color: white;
 }
 
 /*footer*/
@@ -178,13 +196,13 @@ footer .follow{
 }
 
 footer .follow i{
-    color: #465b52;
+    color: black;
     padding-right: 4px;
     cursor: pointer;
 }
 
 footer .install .row img{
-    border: 1px solid #088178;
+    border: 1px solid black;
     border-radius: 6px;
 }
 
@@ -193,410 +211,10 @@ footer .install img{
 }
 
 footer .follow i:hover, footer a:hover{
-    color: #088178;
+    color: #FC9F5B;
 }
 
 footer .copyright{
     align-self: center;
     width: 100%
-}
-
-/*Detail page*/
-#details{
-    display: flex;
-    width: 100%;
-    padding: 40px;
-}
-
-#details .big-img{
-    width: 40%;
-    margin-right: 15px;
-}
-
-.group-imgs{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    width: 700px;
-}
-
-.big-img img{
-    height: 448px;
-}
-
-.small-group{
-    display: flex;
-    flex-direction: column;
-    width: 14%;
-}
-
-.small-group img{
-    height: 145px;
-}
-
-.small-imgs:hover {
-    box-shadow: 1px 1px 10px;
-}
-
-
-#details .book-detail{
-    width: 50%;
-    padding-top: 30px;
-    
-}
-
-#details .book-detail h4{
-    padding: 40px 0 20px 0;
-}
-
-#details .book-detail h2{
-    font-size: 26px;
-}
-
-
-#details .book-detail select{
-    display: block;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-}
-
-#details .book-detail input{
-    width: 50px;
-    height: 47px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
-#details .book-detail input:hover{
-    outline: none;
-}
-
-#details .book-detail button{
-    background-color: #088178;
-    color: #fff;
-
-}
-
-.hl a:hover{
-    color:#088178;
-}
-
-#details .book-detail span{
-    line-height: 25px;
-}
-
-/*Contact page*/
-#form-details{
-    display: flex;
-    justify-content: space-between;
-    margin: 30px;
-    border: 1px solid #e1e1e1;
-    background-color: white;
-    padding: 40px;
-}
-
-#form-details form{
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-#form-details form span{
-    font-size: 12px;
-}
-
-#form-details form h2{
-    font-size:26px;
-    line-height: 35px;
-    padding: 20px 0;
-}
-
-#form-details form input:not(.not),
-#form-details form textarea,
-#form-details form span.box:not(#boe)
-{
-    width: 100%;
-    padding: 12px 15px;
-    outline: none;
-    margin-bottom: 20px;
-    border: 1px solid #e1e1e1;
-}
-
-#form-details form button{
-    color: #fff;
-    background-color: #088178;
-}
-
-#form-details form span#pref{
-    display: flex;
-}
-
-.flex-box{
-    padding-inline: 20px;
-}
-
-span#boe{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 30px 30px 30px;
-}
-
-.sel{
-    width: 100%;
-    height: 44px;
-    margin-left: 30px;
-}
-
-/*About US*/
-#about-head img{
-    width: 50%;
-    height: auto;
-}
-
-#about-head{
-    display: flex;
-    align-items: center;
-}
-
-#about-head div{
-    padding-left: 40px;
-}
-
-#about-vid{
-    text-align: center;
-    
-}
-
-#about-vid .vid{
-    width: 20%;
-    height: 90%;
-    margin: 30px auto 0 auto;
-}
-
-#about-vid .vid video{
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    border: 10px solid #041e42
-}
-
-/*Media Screen*/
-@media (max-width:799px) {
-    #navbar-items{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
-        top: 0;
-        right: -310px;
-        height: 100vh;
-        width: 300px;
-        background-color: #fff;
-        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-        padding: 80px 0 0 10px;
-        transition: 0.3s;
-    }
-
-    #navbar-items li{
-        margin-bottom: 25px;
-    }
-
-    #navbar-items.active{
-        right: 0px;
-    }
-
-    #close{
-        display: initial;
-        position:absolute;
-        top: 30px;
-        left: 10px;
-        color: black;
-        font-size: 17px;
-    }
-
-    #mobile{
-        display: flex;
-        align-items: center;
-    }
-
-    #mobile li{
-        list-style: none;
-        padding-top: 3px;
-    }
-
-    #mobile i{
-        color: #1a1a1a;
-        font-size: 24px;
-        padding-left: 20px;
-    }
-
-    #mobile:hover{
-        cursor: pointer;
-    }
-
-    .bag{
-        display: none;
-    }
-
-    .homepage .book{
-        justify-content: center;
-    }
-
-    .homepage{
-        margin: 15px;
-    }
-
-    #newsletter .form{
-        width: 70%;
-    }
-
-    #form-details form{
-        width: 100%;
-    }
-
-    #about-vid .vid video{
-        width: 60%;
-    }
-
-    #about-vid .vid{
-        width: fit-content;
-        height: auto;
-        border-radius: 25px;
-    }
-
-    #about-head{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #about-head img{
-        width: 80%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 477px) {
-    section .main{
-        width: 100%;
-        height: 100%;
-        text-align: center;
-    }
-
-    .flex{
-        justify-content: center;
-    }
-
-    #main h3{
-        text-align: center;
-        padding-right: 50px;
-    }
-
-    #mobile{
-        display: flex;
-        align-items: center;
-    }
-
-    #mobile li{
-        list-style: none;
-        padding-top: 3px;
-    }
-
-    #mobile i{
-        color: #1a1a1a;
-        font-size: 24px;
-    }
-
-    #mobile:hover{
-        cursor: pointer;
-    }
-
-    
-    #newsletter .form{
-        width: 100%;
-    }
-
-    /*Single Product*/
-    #details{
-        text-align: start;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    
-    }
-    
-    .group-imgs{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .big-img img{
-        width: 342px;
-    }
-
-    .small-group{
-        display: inline-flex;
-        flex-direction: row;
-        width: 342px;
-        justify-content: space-between;
-    }
-
-    #details .book-detail{
-        justify-content: center;
-        align-items: center;
-        min-width: 350px;
-    }
-    #form-details form{
-        width: 100%;
-    }
-
-    .button{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-self: center;
-        min-width: 220px;
-        flex-wrap: wrap;
-    }
-
-    .button button{
-        max-width: 110px;
-    }
-
-    #form-details form span#pref{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .flex-box{
-        padding-top: 20px;
-    }
-
-    #about-vid .vid video{
-        width: 100%;
-    }
-
-    #about-vid .vid{
-        height: fit-content;
-        width: fit-content;
-        border-radius: 25px;
-    }
-
-    #about-head{
-        flex-direction: column;
-    }
-
-    #about-head img{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #about-head div{
-        padding-left: 0px;
-    }
 }
